@@ -1,0 +1,718 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.example.org/dtlifecycle"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.example.org/dtlifecycle">
+    <Prefix name="" IRI="http://www.example.org/dtlifecycle#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>An ontology to describe the lifecycle of Digital Twins including Design, Development, Deployment, and Provenance stages.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal>Digital Twin Lifecycle Ontology</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#Activity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cloud_Provider"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DTDeployment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DTDesign"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DTDevelopment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DTProvenance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Dataset"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Designer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Developer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DigitalTwinLifecycle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DockerContainer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Entity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Image"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Infrastructure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Person"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Project"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Repository"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Scenario"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ScenarioConfiguration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ScenarioDescription"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ScenarioExecution"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ScenarioParameter"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#User"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#createdBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAccessTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCloudProvider"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDesigner"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDeveloper"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasScenarioDescription"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasScenarioParameter"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isInstanceOf"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#cloudProviderName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#datasetLink"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#datasetName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#designerName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#dockerContainerName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#imageName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#imageVersion"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#languageUsed"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#packagesUsed"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#projectMotivation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#projectName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#projectRepository"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#repositoryName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#scenarioName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#userName"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Project1_Design"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Project1_Development"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#dataSourceLink"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Cloud_Provider"/>
+        <Class IRI="#Infrastructure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DTDeployment"/>
+        <Class IRI="#DigitalTwinLifecycle"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DTDesign"/>
+        <Class IRI="#DigitalTwinLifecycle"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DTDevelopment"/>
+        <Class IRI="#DigitalTwinLifecycle"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DTProvenance"/>
+        <Class IRI="#DigitalTwinLifecycle"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Designer"/>
+        <Class IRI="#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Developer"/>
+        <Class IRI="#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DockerContainer"/>
+        <Class IRI="#Infrastructure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Image"/>
+        <Class IRI="#Infrastructure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Scenario"/>
+        <Class IRI="#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ScenarioConfiguration"/>
+        <Class IRI="#Activity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ScenarioDescription"/>
+        <Class IRI="#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ScenarioExecution"/>
+        <Class IRI="#Activity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ScenarioParameter"/>
+        <Class IRI="#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#User"/>
+        <Class IRI="#Person"/>
+    </SubClassOf>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#projectMotivation"/>
+        <NamedIndividual IRI="#Project1_Design"/>
+        <Literal>To optimize factory operations and monitor production in real-time.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#projectName"/>
+        <NamedIndividual IRI="#Project1_Design"/>
+        <Literal>Smart Factory Digital Twin</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#languageUsed"/>
+        <NamedIndividual IRI="#Project1_Development"/>
+        <Literal>Apache Kafka, TensorFlow</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasDeveloper"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#createdBy"/>
+        <Class IRI="#Image"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasAccessTo"/>
+        <Class IRI="#User"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCloudProvider"/>
+        <Class IRI="#DockerContainer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDesigner"/>
+        <Class IRI="#Project"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDeveloper"/>
+        <Class IRI="#Repository"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasScenarioDescription"/>
+        <Class IRI="#Scenario"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasScenarioParameter"/>
+        <Class IRI="#Scenario"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isInstanceOf"/>
+        <Class IRI="#DockerContainer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#createdBy"/>
+        <Class IRI="#DockerContainer"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasAccessTo"/>
+        <Class IRI="#Scenario"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCloudProvider"/>
+        <Class IRI="#Cloud_Provider"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasDesigner"/>
+        <Class IRI="#Designer"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasDeveloper"/>
+        <Class IRI="#Developer"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasScenarioDescription"/>
+        <Class IRI="#ScenarioDescription"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasScenarioParameter"/>
+        <Class IRI="#ScenarioParameter"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isInstanceOf"/>
+        <Class IRI="#Image"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#cloudProviderName"/>
+        <Class IRI="#Cloud_Provider"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#datasetLink"/>
+        <Class IRI="#Repository"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#datasetName"/>
+        <Class IRI="#Dataset"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#designerName"/>
+        <Class IRI="#Designer"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#dockerContainerName"/>
+        <Class IRI="#DockerContainer"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#imageName"/>
+        <Class IRI="#Image"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#imageVersion"/>
+        <Class IRI="#Image"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#languageUsed"/>
+        <Class IRI="#Repository"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#packagesUsed"/>
+        <Class IRI="#Repository"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#projectMotivation"/>
+        <Class IRI="#Project"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#projectName"/>
+        <Class IRI="#Project"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#projectRepository"/>
+        <Class IRI="#Repository"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#repositoryName"/>
+        <Class IRI="#Repository"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#scenarioName"/>
+        <Class IRI="#Scenario"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#userName"/>
+        <Class IRI="#User"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#cloudProviderName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#datasetLink"/>
+        <Datatype abbreviatedIRI="xsd:anyURI"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#datasetName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#designerName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#dockerContainerName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#imageName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#imageVersion"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#languageUsed"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#packagesUsed"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#projectMotivation"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#projectName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#projectRepository"/>
+        <Datatype abbreviatedIRI="xsd:anyURI"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#repositoryName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#scenarioName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#userName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Cloud_Provider</IRI>
+        <Literal>Cloud Provider</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#DTDeployment</IRI>
+        <Literal>The deployment phase of a digital twin lifecycle, where models are deployed in real or virtual environments.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DTDeployment</IRI>
+        <Literal>DT Deployment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#DTDesign</IRI>
+        <Literal>The design phase of a digital twin lifecycle, where specifications and models are created.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DTDesign</IRI>
+        <Literal>DT Design</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#DTDevelopment</IRI>
+        <Literal>The development phase of a digital twin lifecycle, where models are implemented and tested.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DTDevelopment</IRI>
+        <Literal>DT Development</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#DTProvenance</IRI>
+        <Literal>The provenance phase of a digital twin lifecycle, recording changes and historical data.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DTProvenance</IRI>
+        <Literal>DT Provenance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Dataset</IRI>
+        <Literal>Dataset</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#DigitalTwinLifecycle</IRI>
+        <Literal>The lifecycle of a digital twin, including all phases from design to provenance.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DigitalTwinLifecycle</IRI>
+        <Literal>Digital Twin Lifecycle</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DockerContainer</IRI>
+        <Literal>Docker Container</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Image</IRI>
+        <Literal>Image</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Person</IRI>
+        <Literal>Person</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Project</IRI>
+        <Literal>Project</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#dataSourceLink"/>
+        <IRI>#Project1_Design</IRI>
+        <IRI>http://datasource.org/factorydata</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Project1_Design</IRI>
+        <Literal>Project1 Design Phase</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#projectRepository"/>
+        <IRI>#Project1_Development</IRI>
+        <IRI>https://github.com/example/smart-factory-dt</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Project1_Development</IRI>
+        <Literal>Project1 Development Phase</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Project1_Provenance</IRI>
+        <Literal>Project1 Provenance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Repository</IRI>
+        <Literal>Repository</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ScenarioConfiguration</IRI>
+        <Literal>Scenario Configuration</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ScenarioDescription</IRI>
+        <Literal>Scenario Description</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ScenarioExecution</IRI>
+        <Literal>Scenario Execution</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ScenarioParameter</IRI>
+        <Literal>Scenario Parameter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Stakeholder1</IRI>
+        <Literal>Lead designer for the Smart Factory Digital Twin project.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Stakeholder1</IRI>
+        <Literal>John Doe</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#cloudProviderName</IRI>
+        <Literal>Cloud Provider Name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#createdBy</IRI>
+        <Literal>created By</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#datasetLink</IRI>
+        <Literal>Links to the data sources used in the digital twin design.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#datasetLink</IRI>
+        <Literal>Dataset Link</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#datasetName</IRI>
+        <Literal>Dataset Name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#designerName</IRI>
+        <Literal>Designer Name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#dockerContainerName</IRI>
+        <Literal>Docker Container Name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasAccessTo</IRI>
+        <Literal>has Access To</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasCloudProvider</IRI>
+        <Literal>has Cloud Provider</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasDesigner</IRI>
+        <Literal>has Designer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasDeveloper</IRI>
+        <Literal>has Developer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasScenarioDescription</IRI>
+        <Literal>has Scenario Description</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasScenarioParameter</IRI>
+        <Literal>has Scenario Parameter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#imageName</IRI>
+        <Literal>Image Name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#imageVersion</IRI>
+        <Literal>Image Version</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isInstanceOf</IRI>
+        <Literal>is Instance Of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#languageUsed</IRI>
+        <Literal>Technologies used in the development of the digital twin.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#languageUsed</IRI>
+        <Literal>Language Used</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#packagesUsed</IRI>
+        <Literal>Packages Used</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#projectMotivation</IRI>
+        <Literal>The motivation or purpose of the digital twin project.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#projectMotivation</IRI>
+        <Literal>Project Motivation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#projectName</IRI>
+        <Literal>The name of the digital twin project.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#projectName</IRI>
+        <Literal>Project Name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#projectRepository</IRI>
+        <Literal>Link to the project repository, such as a GitHub link.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#projectRepository</IRI>
+        <Literal>Project Repository</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#repositoryName</IRI>
+        <Literal>Repository Name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#scenarioName</IRI>
+        <Literal>Scenario Name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#userName</IRI>
+        <Literal>User Name</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
